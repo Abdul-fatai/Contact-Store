@@ -16,7 +16,7 @@ Route::group(['middleware' => 'api'], function(){
     });
 
     //Add Contact
-    Route::post('contsct/store', function(Request $request){
+    Route::post('contact/store', function(Request $request){
         return Contact::create(['name' => $request->input(['name']), 'email' => $request->input(['email']), 'phone' => $request->input(['phone'])]);
     });
 
@@ -27,7 +27,7 @@ Route::group(['middleware' => 'api'], function(){
 
     //Delete Contact 
     Route::delete('contact/{id}', function($id){
-        return Contact::destory($id);
+        return Contact::destroy($id);
     });
 
 });
